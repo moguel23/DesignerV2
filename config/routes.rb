@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'help' => 'static_pages#help'
   get 'home' => 'static_pages#home'
   get 'about' => 'static_pages#about'
-
+  resources :customers
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
