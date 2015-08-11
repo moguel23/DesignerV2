@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Customer1
+  code: CUS1
+
+two:
+  name: Customer2
+  code: CUS2

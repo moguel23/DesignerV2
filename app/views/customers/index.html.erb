@@ -1,0 +1,6 @@
+<% provide :title, "All Customers" %>
+<h1>All Customers</h1>
+<%= link_to "Add New Customer", new_customer_path %>
+<ul class="customers">
+  <%= render @customers %>
+</ul>
