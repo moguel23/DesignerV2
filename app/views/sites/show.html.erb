@@ -1,0 +1,14 @@
+<% provide :title, @customer.name %>
+<div class="row">
+  <aside class="col-md-4">
+    <section>
+      <h1><%= link_to @customer.name, customer_path(@site.customer) %></h1>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <p> Site Name: <%= @site.name %> </p>
+    <p> Site Code: <%= @site.code %> </p>
+    <p> Site Type: <%= @site.site_type %> </p>
+    <p> Total Users: <%= @site.total_users %> </p>
+  </div>
+</div>

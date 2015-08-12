@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Site1
+  code: DC01
+  site_type: DataCentre
+  total_users: 1
+  customer: one
+
+two:
+  name: Site2
+  code: ST2
+  site_type: Site
+  total_users: 100
+  customer: one

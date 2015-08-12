@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150810040225) do
+ActiveRecord::Schema.define(version: 20150812090050) do
 
   create_table "customers", force: :cascade do |t|
     t.string   "name"
@@ -22,5 +22,17 @@ ActiveRecord::Schema.define(version: 20150810040225) do
 
   add_index "customers", ["code"], name: "index_customers_on_code", unique: true
   add_index "customers", ["name"], name: "index_customers_on_name", unique: true
+
+  create_table "sites", force: :cascade do |t|
+    t.string   "name"
+    t.string   "code"
+    t.integer  "total_users"
+    t.integer  "customer_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "site_type"
+  end
+
+  add_index "sites", ["customer_id"], name: "index_sites_on_customer_id"
 
 end

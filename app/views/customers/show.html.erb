@@ -6,4 +6,11 @@
       Customer Code: <%= @customer.code %>
     </section>
   </aside>
+  <div class="col-md-8">
+    SITES:
+    <%= link_to "Create New Site", new_site_path(:customer => @customer.id) %>
+    <ol class="sites">
+      <%= render @sites %>
+    </ol>
+  </div>
 </div>

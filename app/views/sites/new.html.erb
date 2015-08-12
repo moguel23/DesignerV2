@@ -1,0 +1,24 @@
+<% provide(:title, @customer.name) %>
+<h1>Create New Site</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@site) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+        <%= f.label :name %>
+        <%= f.text_field :name, class:'form_control' %>
+        <%= f.label :code %>
+        <%= f.text_field :code, class:'form_control' %>
+        <%= f.label :site_type %>
+        <%= f.text_field :site_type, class:'form_control' %>
+        <%= f.label :total_users %>
+        <%= f.text_field :total_users, class:'form_control' %>
+        <%= f.submit "Create Site", class:"btn btn-primary" %>
+        <%= hidden_field_tag :customer, @customer.id %>
+    <% end %>
+  </div>
+</div>
+
+
+
+

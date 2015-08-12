@@ -18,6 +18,7 @@ class CustomersController < ApplicationController
 
   def show
     @customer = Customer.find(params[:id])
+    @sites = @customer.sites
   end
 
   def index
