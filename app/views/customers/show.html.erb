@@ -10,7 +10,14 @@
     SITES:
     <%= link_to "Create New Site", new_site_path(:customer => @customer.id) %>
     <ol class="sites">
-      <%= render @sites %>
+      <%= render @customer.sites %>
+    </ol>
+  </div>
+  <div class="col-md-8">
+    PRODUCTS:
+    <%= link_to "Create New Product", new_product_path(:customer => @customer.id) %>
+    <ol class="products">
+      <%= render @customer.products %>
     </ol>
   </div>
 </div>

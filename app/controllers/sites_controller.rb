@@ -34,6 +34,7 @@ class SitesController < ApplicationController
 
 
   #DEFINE PARAMETERS
+  private
   def site_params
     params.require(:site).permit(:name, :code, :site_type, :total_users)
   end

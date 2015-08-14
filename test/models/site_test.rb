@@ -19,4 +19,9 @@ class SiteTest < ActiveSupport::TestCase
     assert_not @site.valid?
   end
 
+  test "should have customer_id" do
+    @site.customer_id = ''
+    assert_not @site.valid?
+  end
+
   end

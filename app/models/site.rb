@@ -5,4 +5,5 @@ class Site < ActiveRecord::Base
   #VALIDATION
   validates :name, presence: true
   validates :code, presence: true
+  validates :customer_id, presence: true
 end
