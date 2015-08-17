@@ -17,7 +17,16 @@
     PRODUCTS:
     <%= link_to "Create New Product", new_product_path(:customer => @customer.id) %>
     <ol class="products">
-      <%= render @customer.products %>
+      <%= @customer.products.each do |product| %>
+
+          <%= render product %>
+          DEVICES:
+          <ul>
+            <%= render product.devices %>
+          </ul>
+      <% end %>
+
+
     </ol>
   </div>
 </div>

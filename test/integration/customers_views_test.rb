@@ -21,6 +21,9 @@ class CustomersViewsTest < ActionDispatch::IntegrationTest
     @customer.products.each do |product|
       assert_match product.name, response.body
     end
+    @customer.devices.each do |device|
+      assert_match device.name, response.body
+    end
   end
 
   test "customers index" do
